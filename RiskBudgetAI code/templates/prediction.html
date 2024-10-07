@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction de Budget de Marché</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .result {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        p {
+            color: #777;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .accept {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .warning {
+            color: #FF9800;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .return-button {
+            background-color: #008CBA;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .return-button:hover {
+            background-color: #005b80;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prédiction de Budget de Marché</h1>
+        <div class="result">
+            <h2>Budget de Marché Prédit :</h2>
+            <p>{{ predicted_market_budget | int }}</p>
+            <h2>Évaluation du Risque :</h2>
+            <p>Risque : {{ risk | round(5) }}</p>
+            {% if risk > 0.1 %}
+            <p class="warning"><strong>Attention :</strong> Le budget de marché prédit présente un risque.</p>
+            {% else %}
+            <p class="accept">Le budget de marché prédit est dans une plage acceptable.</p>
+            {% endif %}
+        </div>
+        <a href="/connexion" class="return-button">Déconnexion</a>
+    </div>
+</body>
+</html>

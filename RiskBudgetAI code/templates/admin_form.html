@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Administration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007bff;
+        }
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 40px auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button, .return-button {
+            display: inline-block;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+
+        button {
+            background-color: #4CAF50;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .return-button {
+            background-color: #f44336;
+        }
+        .return-button:hover {
+            background-color: #d32f2f;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 0; /* Augmenter le padding pour un meilleur espacement */
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            z-index: 1000;
+            border-top: 1px solid #444; /* Ajouter une ligne en haut du pied de page */
+        }
+        .icons {
+            margin: 10px 0; /* Ajouter de l'espace au-dessus et en dessous des icônes */
+        }
+        .icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Page d'Administration</h1>
+    </header>
+
+    <!-- Main content -->
+    <div class="container">
+        <h2>Connexion Administrateur</h2>
+        <form method="POST">
+            <label for="full_name">Nom Complet :</label>
+            <input type="text" id="full_name" name="full_name" required><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Mot de Passe :</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Connexion</button>
+            <a href="{{ url_for('logout') }}" class="return-button">Déconnexion</a>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/algoconsulting" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/algo-consulting-group/" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://twitter.com/ALGOCONSULTING" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+            </a>
+        </div>
+        <p>&copy; 2024 Algo Consulting Group</p>
+    </footer>
+</body>
+</html>

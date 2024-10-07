@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiskBudgetAI - Connexion</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Pour positionner l'icône de façon absolue */
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .admin-button {
+            margin-top: 10px;
+            background-color: #28a745;
+        }
+        .admin-button:hover {
+            background-color: #218838;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px; /* Ajuster la taille selon les besoins */
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="logo">
+        <img src="https://static.wixstatic.com/media/f3ef1f_307095dd853547129980fbc313cecbe7~mv2.png/v1/fill/w_110,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20algo%20HD.png" alt="Logo RiskBudgetAI">
+    </a>
+    <div class="container">
+        <h1>RiskBudgetAI</h1>
+        <form method="post" action="/">
+            <label for="id" style="font-size: 1em; color: gray;">Entrez votre ID :</label>
+            <input type="text" id="id" name="id" required>
+            <button type="submit">Se Connecter</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Algo Consulting Group</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid #007bff;
+        }
+        nav {
+            margin-top: 20px; /* Réduit l'espacement sous l'en-tête fixe */
+            padding-bottom: 20px;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+    
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+            margin: 30px auto;
+            text-align: left;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #007bff;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 0; /* Augmenter le padding pour un meilleur espacement */
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            margin-top: 20px;
+            z-index: 1000;
+            border-top: 1px solid #444; /* Ajouter une ligne en haut du pied de page */
+        }
+        .icons {
+            margin: 10px 0; /* Ajouter de l'espace au-dessus et en dessous des icônes */
+        }
+        .icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+    
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        RiskBudgetAI - Contact
+    </header>
+    <nav>
+        <button onclick="window.location.href='/'">Accueil</button>
+        <button onclick="window.location.href='/connexion'">Connexion</button>
+        <button onclick="window.location.href='/admin_form'">Administration</button>
+        <button onclick="window.location.href='/contact'">Contact</button>
+    </nav>
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <form method="post" action="/contact">
+            <label for="full_name">Nom complet :</label>
+            <input type="text" id="full_name" name="full_name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/algoconsulting" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/algo-consulting-group/" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://twitter.com/ALGOCONSULTING" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+            </a>
+        </div>
+        <p>&copy; 2024 Algo Consulting Group</p>
+    </footer>
+</body>
+</html>

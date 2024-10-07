@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrer les Détails du Budget</title>
+    <style>
+        /* Styles généraux pour le corps et le conteneur */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px; /* Augmenter la largeur maximale */
+            width: 100%;
+            text-align: center;
+        }
+        /* Style pour le formulaire de budget */
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 1em;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px; /* Augmenter le padding pour plus de confort */
+            margin-bottom: 15px; /* Augmenter l'espacement entre les champs */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button, .return-button {
+            display: inline-block;
+            padding: 12px 25px; /* Augmenter le padding pour plus de confort */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Pour le lien de retour */
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            margin-right: 10px; /* Espacement entre les boutons */
+        }
+        button:hover {
+            background-color: #007bff;
+        }
+        .return-button {
+            background-color: #f44336;
+            color: white;
+        }
+        .return-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Entrer les Détails du Budget</h1>
+        <form method="POST">
+            <label for="initial_budget">Entrer le Budget Initial :</label>
+            <input type="text" id="initial_budget" name="initial_budget" required>
+            
+            <label for="cotation_provisoire">Entrer la Cotation Provisoire :</label>
+            <input type="text" id="cotation_provisoire" name="cotation_provisoire" required>
+            
+            <label for="cotation_definitive">Entrer la Cotation Définitive :</label>
+            <input type="text" id="cotation_definitive" name="cotation_definitive" required>
+            
+            <label for="cotation_adjudicataires">Entrer la Cotation des Adjudicataires :</label>
+            <input type="text" id="cotation_adjudicataires" name="cotation_adjudicataires" required>
+            
+            <button type="submit">Prédire le Budget de Marché</button>
+            <a href="/connexion" class="return-button">Déconnexion</a>
+        </form>
+        
+    </div>
+</body>
+</html>

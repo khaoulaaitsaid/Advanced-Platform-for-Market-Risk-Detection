@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiskBudgetAI</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007bff;
+           
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-top: 60px; /* Ajuster l'espacement sous l'en-tête fixe */
+            padding-bottom: 20px;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 10px;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .presentation-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .presentation-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(50% - 40px);
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center; /* Centrer le texte dans la carte */
+        }
+        .presentation-card h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 24px; /* Taille du texte du titre */
+            text-decoration: underline; /* Souligner le titre */
+        }
+        .presentation-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 0; /* Augmenter le padding pour un meilleur espacement */
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            margin-top: 20px;
+            z-index: 1000;
+            border-top: 1px solid #444; /* Ajouter une ligne en haut du pied de page */
+        }
+        .icons {
+            margin: 10px 0; /* Ajouter de l'espace au-dessus et en dessous des icônes */
+        }
+        .icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RiskBudgetAI</h1>
+    </header>
+    <nav>
+        <button onclick="window.location.href='/'">Acceuil</button>
+        <button onclick="window.location.href='/connexion'">Connexion</button>
+        <button onclick="window.location.href='/admin_form'">Administration</button>
+        <button onclick="window.location.href='/contact'">Contact</button>
+    </nav>
+    <div class="content">
+        <img src="https://static.wixstatic.com/media/f3ef1f_b7d2b83c7c8348d9a9724728b8b73a58~mv2.jpg/v1/fill/w_980,h_638,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f3ef1f_b7d2b83c7c8348d9a9724728b8b73a58~mv2.jpg" 
+             alt="Metaverse and Blockchain Technology Concepts. Person with an Experiences of Metaverse Virt" 
+             fetchpriority="high">
+        <div class="presentation-container">
+            <div class="presentation-card">
+                <h2>Présentation de l'entreprise</h2>
+                <p>ALGO Consulting est une société leader de conseil en informatique. Nous sommes fiers d’avoir joué un rôle important dans la conduite de la transformation numérique et d’en faire une plaque tournante technologique dans la région. Notre parcours a commencé en tant que startup avec pour mission de soutenir le progrès et la croissance de nos pays et de notre continent grâce à la technologie. Aujourd'hui, notre travail acharné et notre engagement envers l'excellence ont porté leurs fruits puisque des millions de personnes utilisent des plates-formes logicielles et système développées par nos talentueux ingénieurs. Nous nous engageons à fournir des solutions innovantes qui répondent aux besoins uniques de nos clients et contribuent à leur succès. Avec une équipe de professionnels expérimentés, une technologie de pointe et une concentration sur l'obtention de résultats, ALGO Consulting est votre partenaire de confiance pour tous vos besoins informatiques.</p>
+            </div>
+            <div class="presentation-card">
+                <h2>Présentation de l'application</h2>
+                <p>RiskBudgetAI est une application innovante conçue pour révolutionner la gestion des budgets de marché à travers l'utilisation avancée de l'apprentissage automatique et de l'analyse de données. Notre solution permet aux entreprises de mieux évaluer les risques financiers en comparant les budgets prévisionnels avec les budgets réels observés sur le marché. Grâce à un modèle prédictif sophistiqué, RiskBudgetAI identifie les écarts potentiels et fournit des recommandations précises pour optimiser les allocations budgétaires. En intégrant des données historiques et des analyses approfondies, l'application aide les décideurs à anticiper les défis financiers et à prendre des décisions éclairées pour garantir la réussite de leurs projets.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/algoconsulting" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/algo-consulting-group/" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://twitter.com/ALGOCONSULTING" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+            </a>
+        </div>
+        <p>&copy; 2024 Algo Consulting Group</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message de Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        .access-denied-content {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .access-denied-content h1 {
+            color: #dc3545;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            color: #721c24;
+            font-weight: bold;
+            padding: 20px;
+            border: 1px solid #f5c6cb;
+            background-color: #f8d7da;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .access-denied-content a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .access-denied-content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer .icons {
+            margin: 10px 0;
+        }
+
+        footer .icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        footer .icons img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+
+      
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        RiskBudgetAI
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <button onclick="window.location.href='/'">Accueil</button>
+        <button onclick="window.location.href='/connexion'">Connexion</button>
+        <button onclick="window.location.href='/admin_form'">Administration</button>
+        <button onclick="window.location.href='/contact'">Contact</button>
+    </nav>
+
+    <!-- Main content -->
+    <div class="access-denied-content">
+        <h1>Confirmation</h1>
+        <div class="message">
+            Votre message a été envoyé avec succès !
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/algoconsulting" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/algo-consulting-group/" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://twitter.com/ALGOCONSULTING" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+            </a>
+        </div>
+        <p>&copy; 2024 Algo Consulting Group</p>
+    </footer>
+</body>
+</html>
